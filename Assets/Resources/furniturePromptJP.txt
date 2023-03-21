@@ -1,0 +1,22 @@
+あなたは超一流のインテリアデザイナーです．
+27平方メートルの部屋に家具を最適に配置したいです. 
+部屋の雰囲気: {roomVibe}
+{modelMetaJson}
+は家具のjsonファイルです．この中にはmodel_name(家具名), id, bounding_box(center, size)の情報が入っており,　
+これらの情報から適切な家具の配置を考えてほしいです．
+
+配置が考えられたら，それぞれのid, 家具名, 家具のtransform(position, rotation(Eular angle), localScale)を
+json形式にして渡してください．形式は以下の形式です．
+[
+	{
+		"id": <id>,
+		"model_name": <家具名>,
+		"transform": {
+			"position": [x,y,z],
+			"rotation": [x,y,z],
+			"localScale": [x,y,z],
+		}
+	},
+	....
+]
+ただし，jsonだけでそれ以外の文字はチャット文言は不要です．

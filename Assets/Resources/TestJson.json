@@ -1,0 +1,58 @@
+{
+	"models": [
+		{
+			"id": "e2532c6b9a56fe984bef72f03d7235ca",
+			"model_name": "bed",
+			"transform": {
+				"position": [0.6, 0, -1.8],
+				"rotation": [0, -45, 0],
+				"localScale": [0.75, 0.75, 0.75]
+			}
+		},
+		{
+			"id": "5bcfec5fe326fff4e0deec465e890dca",
+			"model_name": "bookshelf",
+			"transform": {
+				"position": [1.2, 0.15, 1.2],
+				"rotation": [0, 90, 0],
+				"localScale": [0.5, 0.5, 0.5]
+			}
+		},
+		{
+			"id": "8fcaa6e3a07bcf5038169f16cecf9bd",
+			"model_name": "cabinet",
+			"transform": {
+				"position": [2.4, 0.7, -0.1],
+				"rotation": [0, 0, 0],
+				"localScale": [0.6, 0.6, 0.6]
+			}
+		},
+		{
+			"id": "30beaf15d2d2beb1febad4f49b26ec52",
+			"model_name": "chair",
+			"transform": {
+				"position": [-0.5, 0, 0],
+				"rotation": [0, 45, 0],
+				"localScale": [0.6, 0.6, 0.6]
+			}
+		},
+		{
+			"id": "ab60bad52d6244db86052e834fbd2c4a",
+			"model_name": "pillow",
+			"transform": {
+				"position": [-0.5, 0.25, 0.4],
+				"rotation": [0, 45, 0],
+				"localScale": [0.75, 0.75, 0.75]
+			}
+		},
+		{
+			"id": "57759e351ec76d86d3c1501c166e6b2a",
+			"model_name": "remote",
+			"transform": {
+				"position": [-1.3, 0.25, -1.7],
+				"rotation": [0, 135, 0],
+				"localScale": [0.5, 0.5, 0.5]
+			}
+		}
+	]
+}
