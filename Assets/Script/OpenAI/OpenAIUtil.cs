@@ -47,9 +47,19 @@ public static class OpenAIUtil
         EditorUtility.ClearProgressBar();
 
         // Response extraction
-        var json = post.downloadHandler.text;
-        var data = JsonUtility.FromJson<OpenAI.Response>(json);
-        return data.choices[0].message.content;
+        if (post.result == UnityWebRequest.Result.Success)
+        {
+            var json = post.downloadHandler.text;
+            //Debug.Log(json);
+            var data = JsonUtility.FromJson<OpenAI.Response>(json);
+            return data.choices[0].message.content;
+        }
+        else
+        {
+            Debug.LogErrorFormat("error: {0}, message: {1}", post.error, post.downloadHandler.text);
+            return "";
+
+        }
     }
 }
 

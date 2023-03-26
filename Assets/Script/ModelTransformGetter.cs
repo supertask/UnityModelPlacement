@@ -26,17 +26,18 @@ namespace ModelPlacement
 
         public string GetOrganizingModelJson(string modelMeta)
         {
-            //var prompt = "[{'model_name': 'tub', 'meta': [{'bounding_box': {'center': [3.6707544, 1.9304, -2.7820005], 'size': [7.3327311, 3.8608, 5.307619]}}, {'bounding_box': {'center': [-2.844715, 0.1798225, -0.206161], 'size': [1.70001, 0.440445, 0.7]}}, `";
-            var prompt = this.WrapPrompt(modelMeta, "Please try to make the room as girl-friendly as possible.");
+            var prompt = this.WrapPrompt(modelMeta, 
+@"");
             Debug.Log("prompt: " + prompt);
             var organizingModelJson = OpenAIUtil.InvokeChat(prompt);
+            Debug.Log("chatGPT result: " + organizingModelJson);
             //var organizingModelJson = "";
             return organizingModelJson;
         }
 
         public string WrapPrompt(string modelMeta, string rules)
         {
-            return this.LoadPrompt(promptPath).Replace("{roomVibe}", rules).Replace("{modelMetaJson}", modelMeta);
+            return this.LoadPrompt(promptPath).Replace("{rules}", rules).Replace("{modelMetaJson}", modelMeta);
         }
 
 

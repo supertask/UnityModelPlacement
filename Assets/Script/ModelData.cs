@@ -5,13 +5,13 @@ namespace ModelPlacement
     {
         public float[] position;
         public float[] rotation;
-        public float[] localScale;
     }
 
     [System.Serializable]
     public class ModelData
     {
-        public string id;
+        public string model_id;
+        public string model_child_id;
         public string model_name;
         public TransformData transform;
     }
