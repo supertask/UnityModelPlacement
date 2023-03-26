@@ -1,24 +1,60 @@
 {
-	"models": [
-		{
-			"model_id": "02818832",
-			"model_child_id": "1f11b3d9953fabcf8b4396b18c85cf0f",
-			"model_name": "bed",
-			"transform": {
-				"position": [0.6, 0, -1.8],
-				"rotation": [0, -45, 0],
-				"localScale": [0.75, 0.75, 0.75]
-			}
-		},
-		{
-			"model_id": "02871439",
-			"model_child_id": "24c62fe437ecf586d42b9650f19dd425",
-			"model_name": "bookshelf",
-			"transform": {
-				"position": [1.2, 0.15, 1.2],
-				"rotation": [0, 90, 0],
-				"localScale": [0.5, 0.5, 0.5]
-			}
-		}
-	]
+    "models": [
+        {
+            "model_id": "02933112",
+            "model_child_id": "49485d1e98629d0c1c76f329bc4666d1",
+            "transform": {
+                "position": [0.0, 0.0, 0.0],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        },
+        {
+            "model_id": "02871439",
+            "model_child_id": "51f7a721c24712f35ce62bce310fcd30",
+            "transform": {
+                "position": [12.0, 0.0, 0.0],
+                "rotation": [0.0, 90.0, 0.0]
+            }
+        },
+        {
+            "model_id": "03001627",
+            "model_child_id": "535289ef7d9bdba8a69bcaf4198ba9da",
+            "transform": {
+                "position": [0.0, 10.0, 0.0],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        },
+        {
+            "model_id": "04379243",
+            "model_child_id": "7bbdfac048aefc9a5634c21965ee6bab",
+            "transform": {
+                "position": [5.0, 2.0, 5.0],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        },
+        {
+            "model_id": "02871439",
+            "model_child_id": "51f7a721c24712f35ce62bce310fcd30",
+            "transform": {
+                "position": [7.0, 8.0, -1.0],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        },
+        {
+            "model_id": "03211117",
+            "model_child_id": "7e1212c48c877b87eca8a38e13335285",
+            "transform": {
+                "position": [9.0, 2.0, 2.0],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        },
+        {
+            "model_id": "02818832",
+            "model_child_id": "5931f3a3ff29d1a36e07666ce67ff5a",
+            "transform": {
+                "position": [5.0, 0.0, 5.5],
+                "rotation": [0.0, 0.0, 0.0]
+            }
+        }
+    ]
 }

@@ -7,7 +7,7 @@ The user is asked to consider the appropriate arrangement of the furniture based
 
 Arrangement rules:
 - 10 square meter room
-- Put furniture on it on the floor( position=[0,0,0], size=[10,10,10]).e.g. 
+- Put furniture on it on the floor( position=[0,0,0], size=[10,10,10]).
   - Consider real_world_size's centroid and size.
 - Furniture meshes are arranged so that they do not cover each other
 - The same piece of furniture may be used more than once if necessary
@@ -19,15 +19,15 @@ Output:
 		{
 			"model_id": <model_id>,
 			"model_child_id": <model_child_id>,
-			"model_name": <furniture name>,
 			"transform": {
 				"position": [x,y,z],
-				"rotation": [0,y,0] //Eular angle
+				"rotation": [0,y,0]
 			}
 		},
 		...
-		// max num of models is 12, min is 8
 	]
 }
+A rotation must be Eular angle.
+A max num of models is 10, min is 7.
 
 I only need the json body. Don't add any explanation.

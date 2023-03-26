@@ -12,7 +12,7 @@ namespace ModelPlacement
     {
         public string model_id;
         public string model_child_id;
-        public string model_name;
+        //public string model_name;
         public TransformData transform;
     }
 

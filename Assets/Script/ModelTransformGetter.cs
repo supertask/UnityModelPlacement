@@ -24,14 +24,11 @@ namespace ModelPlacement
 
         }
 
-        public string GetOrganizingModelJson(string modelMeta)
+        public string GetTransformJson(string modelMeta)
         {
             var prompt = this.WrapPrompt(modelMeta, 
 @"");
-            Debug.Log("prompt: " + prompt);
             var organizingModelJson = OpenAIUtil.InvokeChat(prompt);
-            Debug.Log("chatGPT result: " + organizingModelJson);
-            //var organizingModelJson = "";
             return organizingModelJson;
         }
 

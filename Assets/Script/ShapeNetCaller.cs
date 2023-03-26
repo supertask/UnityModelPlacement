@@ -45,7 +45,8 @@ namespace ModelPlacement
             }
         }
 
-        public async UniTask DownloadModel(ModelData modelData, UnityAction<ModelData, ModelResourcePath> OnCompleted)
+        public async UniTask DownloadModel(ModelData modelData, KeyValuePair<JObject,JObject> modelMeta,
+            UnityAction<ModelData, KeyValuePair<JObject,JObject>, ModelResourcePath> OnCompleted)
         {
             // APIへのリクエスト
             string apiUrl = $"{_baseUrl}/model/meta/{modelData.model_id}/{modelData.model_child_id}";
@@ -99,7 +100,7 @@ namespace ModelPlacement
             }
             ModelResourcePath modelResourcePath = new ModelResourcePath(objPath, mtlPath, texturePaths);
 
-            OnCompleted(modelData, modelResourcePath);
+            OnCompleted(modelData, modelMeta, modelResourcePath);
         }
 
         public async UniTask<string> GetModelMetaForChatGPT()
@@ -125,7 +126,7 @@ namespace ModelPlacement
             }
         }
 
-        public async UniTask<string> GetModelMetaAll()
+        public async UniTask<JArray> GetModelMetaAll()
         {
             string url = $"{_baseUrl}/model/meta_all";
             UnityWebRequest request = UnityWebRequest.Get(url);
@@ -134,12 +135,12 @@ namespace ModelPlacement
             if (request.result == UnityWebRequest.Result.Success)
             {
                 var text = request.downloadHandler.text;
-                _metaAllJson = JArray.Parse(text);
+                var metaAllJson = JArray.Parse(text);
                 //Debug.LogFormat("GetModelMetaForChatGPT: {0}, tex: {1}", meta.ToString(), text);
                 //Debug.LogFormat("tex: {0}",text);
 
                 //OnCompleted(text);
-                return text;
+                return metaAllJson;
             }
             else
             {
